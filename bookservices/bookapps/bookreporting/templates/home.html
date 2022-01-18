@@ -1,0 +1,16 @@
+<div>
+    {% for book in books %}
+
+    <div class="bookname">
+        
+            <h3>{{ book.name|capfirst }}</h3>
+    
+        <p>
+            {{ book.submission_date}}
+        </p>
+        <p>
+            {{book.description}}    
+        </p>
+    </div>
+    {% endfor %}
+</div>
