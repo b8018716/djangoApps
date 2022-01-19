@@ -16,7 +16,6 @@ def book_detail(request, book_id):
         raise Http404('Book not found')
     return render(request, 'book_detail.html',{'book':book,})
 def about(request):
-
-    return HttpResponse('<h1> Book it services about us </h1>')
+    return render(request, 'about.html', {'title':'About us'})
 
 # Create your views here.
