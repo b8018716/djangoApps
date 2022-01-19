@@ -14,3 +14,20 @@
     </div>
     {% endfor %}
 </div>
+
+<div>
+    {% for author in authors %}
+
+    <div class="authorname">
+        
+            <h3>{{ author.name|capfirst }}</h3>
+    
+        <p>
+            {{ author.gender}}
+        </p>
+        <p>
+            {{author.dob}}    
+        </p>
+    </div>
+    {% endfor %}
+</div>

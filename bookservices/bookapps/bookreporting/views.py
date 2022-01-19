@@ -2,11 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import Http404
 
-from .models import Book
+from .models import Book, Author
 
 def home(request):
     books = Book.objects.all()
-    return render(request, 'home.html', {'books':books,})
+    authors = Author.objects.all()
+    return render(request, 'home.html', {'books':books,'authors':authors})
 
 def book_detail(request, book_id):
     try:
